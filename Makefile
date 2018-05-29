@@ -1,16 +1,16 @@
 .PHONY: run clean
 
-database_handler :database_handler.c
-	gcc -g -ansi -pedantic -Wall database_handler.c -o database_handler
-	
-run: database_handler
-	valgrind --leak-check=yes ./database_handler
-		
-run2: database_handler
-	nemiver database_handler
-	
-run3: database_handler
-	./database_handler
-	
+tiere: tiere.c
+	gcc -g -ansi -pedantic -Wall database_handler.c tiere.c -o tiere
+
+run: tiere
+	valgrind --leak-check=yes ./tiere
+
+run2: tiere
+	nemiver tiere $(args)
+
+run3: tiere
+	./tiere $(args)
+
 clean:
-	rm database_handler database_handler.o
+	rm tiere tiere.o

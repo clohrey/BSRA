@@ -1,6 +1,15 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
+#define _POSIX_C_SOURCE 200809L
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <ctype.h>
+
 enum { DB_KEYLEN=20, DB_CATLEN=20, DB_VALLEN=255 };
 
 typedef struct dbrec {
@@ -9,8 +18,12 @@ typedef struct dbrec {
     char value[DB_VALLEN];   /* Wert */
 } DBRecord;
 
-int db_list(const char *path, int outfd, 
-  int (*filter)(DBRecord *rec, const void *data), const void *data);
+int db_list(
+	const char *path,
+	int outfd,
+	int (*filter)(DBRecord *rec, const void *data),
+	const void *data
+);
 
 int db_search(const char *filepath, int start, DBRecord *record);
 
