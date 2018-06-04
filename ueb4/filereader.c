@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include "linebuffer.h"
 
-LineBuffer *buf_new(int descriptor, const char *linesep){
-	LineBuffer lb_temp;
-	LineBuffer *lbptr = &lb_temp;
-	
-	return lbptr;
+LineBuffer *buf_new(int descriptor, const char *linesep)
+{
+    LineBuffer *buffer = calloc(1, sizeof(LineBuffer));
+    buffer->descriptor = descriptor;
+    buffer->linesep = linesep;
+    buffer->lineseplen = strlen(linesep);
+    return buffer;
 }
 
 void buf_dispose(LineBuffer *b){
-	
+	free(b);
 }
 
 int buf_readline(LineBuffer *b, char *line, int linemax){
