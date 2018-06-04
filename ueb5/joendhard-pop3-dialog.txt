@@ -1,0 +1,54 @@
++OK POP3 ready.
+user joendhard
++OK
+pass biffel
++OK Logged in.
+stat
++OK 9 9160
+list
++OK 9 messages:
+1 993
+2 867
+3 1012
+4 1106
+5 1885
+6 923
+7 1472
+8 451
+9 451
+.
+list 2
++OK 2 867
+retr 1
++OK 993 octets
+Return-Path: <frits@vollradisroda.xy>
+X-Original-To: joendhard@biffel.xy
+Delivered-To: joendhard@biffel.xy
+Received: by mail.biffel.xy (Postfix, from userid 0)
+	id 2BB5849EAA; Sun, 27 May 2018 19:05:07 +0200 (CEST)
+To: <joendhard@biffel.xy>
+X-Mailer: mail (GNU Mailutils 2.99.99)
+Message-Id: <20180527170507.2BB5849EAA@mail.biffel.xy>
+Date: Sun, 27 May 2018 19:05:07 +0200 (CEST)
+From: frits@vollradisroda.xy
+
+Sehr geehrter Joendhard,
+
+wie in unserem Telefonat besprochen wuerden
+wir uns hoch geehrt fuehlen, sollten Sie die
+Zeit finden, uns in unserem Schloss zu besuchen.
+
+Der von Ihnen in Aussicht gestellte Vortrag
+ueber die Bedeutung des Niesens in der Antike
+findet bei der Tagung der Hals-Nasen-Ohren-Aerzte
+in unseren Raeumlichkeiten ohne Zweifel grossen
+Anklang und ungeheucheltes Interesse.
+
+In der Hoffnung auf eine positive Antwort
+verbleiben wir mit dem Ausdruck  vorzueglichster
+Hochachtung Ihr
+   Frits van Bommelding, Schlossherr und -Verwalter
+.
+quit
++OK Logging out.
+
