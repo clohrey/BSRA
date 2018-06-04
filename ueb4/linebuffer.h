@@ -4,13 +4,13 @@
 #define LINEBUFFERSIZE 1024
 
 typedef struct lbuf {
-    int descriptor;             /* Eingabe-Descriptor */
-    const char *linesep;        /* Zeilentrenner, C-String */
-    unsigned lineseplen;        /* Länge des Zeilentrenners in Bytes*/
+    int descriptor;				/* Eingabe-Descriptor */
+    const char *linesep;		/* Zeilentrenner, C-String */
+    unsigned lineseplen;		/* Länge des Zeilentrenners in Bytes*/
     char buffer[LINEBUFFERSIZE];/* Lesebuffer */
-    unsigned bytesread;         /* Anzahl bereits von descriptor gelesener Bytes */
-    unsigned here;              /* aktuelle Verarbeitungsposition im Lesebuffer */
-    unsigned end;               /* Anzahl belegter Bytes im Lesebuffer */
+    unsigned bytesread;			/* Anzahl bereits von descriptor gelesener Bytes */
+    unsigned here;				/* aktuelle Verarbeitungsposition im Lesebuffer */
+    unsigned end;				/* Anzahl belegter Bytes im Lesebuffer */
 } LineBuffer;
 
 
