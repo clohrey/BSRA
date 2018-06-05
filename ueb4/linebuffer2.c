@@ -10,12 +10,12 @@
 
 LineBuffer *buf_new(int descriptor, const char *linesep)
 {
-    LineBuffer *buffer = calloc(1, sizeof(LineBuffer));
-    buffer->descriptor = descriptor;
-    buffer->linesep = linesep;
-    buffer->lineseplen = strlen(linesep);
+    LineBuffer *bptr = calloc(1, sizeof(LineBuffer));
+    bptr->descriptor = descriptor;
+    bptr->linesep = linesep;
+    bptr->lineseplen = strlen(linesep);
 
-    return buffer;
+    return bptr;
 }
 
 void buf_dispose(LineBuffer *b)
