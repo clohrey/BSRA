@@ -37,7 +37,7 @@ int buf_where(LineBuffer *b)
 
 int buf_readline(LineBuffer *b, char *line, int linemax)
 {
-    char *lineString = malloc(linemax);
+    char *lineString = calloc(1, sizeof(LineBuffer));
     int linestart = buf_where(b);
     char *sep;
     int index = 0;
